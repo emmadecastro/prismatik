@@ -1,0 +1,40 @@
+:root{--bg:#0b0820;--panel:rgba(10,9,32,.72);--ink:#f0e6d2;--mute:#a09b8c;--gold:#c8aa6e;--gold-dim:#785a28;--teal:#0ac8b9;--teal-dk:#0a323c;--line:#3a2f5e;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,sans-serif;min-height:100vh;
+background:radial-gradient(1.5px 1.5px at 12% 18%,#fff8 50%,transparent 51%),radial-gradient(1.5px 1.5px at 78% 12%,#fff6 50%,transparent 51%),radial-gradient(2px 2px at 64% 64%,#c8aa6e99 50%,transparent 51%),radial-gradient(1.5px 1.5px at 30% 82%,#fff6 50%,transparent 51%),radial-gradient(ellipse at 70% 0%,#3b1f7a 0%,transparent 60%),linear-gradient(#150b36,#0b0820 70%) fixed}
+.w{max-width:780px;margin:0 auto;padding:18px 16px 40px}
+h1{font:600 1.9rem/1.1 "Palatino Linotype","Book Antiqua",Georgia,serif;letter-spacing:.14em;text-transform:uppercase;margin:6px 0 2px;color:var(--ink)}
+.sub{color:var(--mute);margin:0 0 16px;padding-bottom:12px;border-bottom:1px solid var(--gold-dim);font-size:.9rem}
+nav{display:flex;gap:2px;overflow-x:auto;border-bottom:1px solid var(--line);margin-bottom:14px}
+nav button{background:none;border:0;border-bottom:3px solid transparent;color:var(--mute);padding:10px 12px;font:600 .8rem "Segoe UI",system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;cursor:pointer}
+nav button[aria-selected="true"]{color:var(--gold);border-bottom-color:var(--gold)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+canvas{display:block;width:100%;height:auto;background:#05040c;border:1px solid var(--gold-dim);box-shadow:0 0 0 3px rgba(0,0,0,.35);border-radius:2px;touch-action:none}
+section{display:none}section.on{display:block}
+.ctl{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:14px 0}
+.ctl label{display:flex;flex-direction:column;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);min-width:140px;flex:1}
+input[type=range]{width:100%;accent-color:var(--gold)}
+.b{background:rgba(5,4,12,.8);color:var(--gold);border:1px solid var(--gold-dim);border-radius:2px;padding:10px 20px;font:600 .8rem "Segoe UI",system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:inset 0 0 0 1px rgba(200,170,110,.15)}
+.b:hover{border-color:var(--gold)}
+.b.sel,#nx{background:var(--teal-dk);border-color:var(--teal);color:#d4fffb;box-shadow:inset 0 0 12px rgba(10,200,185,.25)}
+p.n{color:var(--mute);font-size:.9rem;margin:8px 0}
+ol{padding-left:20px}ol li{margin:6px 0}
+#msg{font-weight:600;color:var(--gold);min-height:1.5em}
+.rank{display:flex;gap:18px;align-items:center;margin:16px 0;flex-wrap:wrap}
+.ring{width:150px;height:150px;flex:none;border-radius:50%;border:3px solid var(--gold-dim);background:var(--panel);box-shadow:0 0 0 5px rgba(0,0,0,.35),inset 0 0 24px rgba(200,170,110,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;text-align:center}
+.ring small{color:var(--mute);letter-spacing:.2em;font-size:.7rem}
+.ring b{font:600 2.8rem/1.1 "Palatino Linotype",Georgia,serif;color:var(--gold)}
+.ring #lv{color:var(--mute);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+#lvl{list-style:none;margin:0;padding:0;flex:1;min-width:220px}
+#lvl li{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;margin:0 0 8px;color:var(--mute)}
+#lvl i{font:600 1.1rem Georgia,serif;font-style:normal;text-align:center;padding:6px 0;background:linear-gradient(#3a3d45,#23252b);clip-path:polygon(0 0,85% 0,100% 50%,85% 100%,0 100%);color:var(--ink)}
+#lvl li.cur{color:var(--ink)}
+#lvl li.cur i{background:linear-gradient(#e0c27e,#8c6a2b);color:#1a1205}
+#lvl em{font-style:normal;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+@media(min-width:900px){.w{max-width:1000px;display:grid;grid-template-columns:1fr 210px;column-gap:24px;align-items:start}
+h1,.sub{grid-column:1/3}
+section{grid-column:1;grid-row:3}
+nav{grid-column:2;grid-row:3;flex-direction:column;overflow:visible;border:1px solid var(--gold-dim);background:var(--panel);margin:0}
+nav button{text-align:left;border-bottom:0;border-left:3px solid transparent;padding:14px 16px}
+nav button[aria-selected="true"]{border-left-color:var(--gold);background:rgba(200,170,110,.08)}}

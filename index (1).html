@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prismatik – Le laboratoire de lumière et de couleur</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="w">
+<h1>Prismatik</h1>
+<p class="sub">Le laboratoire de lumière et de couleur. Touchez, déplacez, observez.</p>
+<nav role="tablist" id="nav"></nav>
+
+<section id="prism"><canvas id="c1"></canvas>
+<div class="ctl"><label>Rotation du prisme<input id="rot" type="range" min="0" max="120" value="0"></label><label>Dispersion du verre<input id="disp" type="range" min="0.4" max="2" step="0.05" value="1"></label></div>
+<p class="n">Déplacez la source (point blanc) et le prisme. Chaque couleur est réfractée avec un indice légèrement différent (loi de Snell), c’est ce qui étale l’arc-en-ciel. La dispersion est volontairement exagérée.</p></section>
+
+<section id="color"><canvas id="c2"></canvas>
+<div class="ctl"><button class="b sel" id="m1">Synthèse additive (lumière)</button><button class="b" id="m2">Synthèse soustractive (encre)</button></div>
+<p class="n" id="cn"></p></section>
+
+<section id="laser"><canvas id="c3"></canvas>
+<div class="rank"><div class="ring"><small>SCORE</small><b id="sc">0</b><span id="lv"></span></div><ol id="lvl"></ol></div>
+<div class="ctl"><button class="b" id="rs">Rejouer</button><button class="b" id="nx" hidden>Niveau suivant</button></div>
+<p id="msg"></p><p class="n">Touchez un miroir pour l’orienter et guidez le laser jusqu’à la cible. Moins vous touchez de miroirs, plus vous marquez de points.</p></section>
+
+<section id="holo"><canvas id="c4"></canvas>
+<div class="ctl"><button class="b sel" id="h1">Planète</button><button class="b" id="h2">Cube</button><label>Taille<input id="hs" type="range" min="40" max="110" value="75"></label></div>
+<p class="n">Posez la pyramide au centre de l’écran de votre téléphone, pointe vers le bas, dans une pièce sombre, luminosité au maximum. Les quatre reflets se rejoignent et l’image semble flotter.</p>
+<ol><li>Découpez 4 trapèzes dans un plastique transparent rigide (boîtier de CD, par exemple) : base 6 cm, sommet 1 cm, hauteur 3,5 cm. Ajustez ces cotes à la taille de l’écran.</li><li>Assemblez-les au ruban adhésif en pyramide tronquée.</li><li>Posez-la sur l’écran, face lisse vers vous, et regardez de côté à hauteur des yeux.</li></ol></section>
+
+<section id="pola"><canvas id="c5"></canvas>
+<div class="ctl"><button class="b" id="cam">Activer la caméra</button><label>Angle du filtre<input id="ang" type="range" min="0" max="180" value="0"></label></div>
+<p class="n" id="pn">Tournez le filtre virtuel : les reflets brillants s’éteignent quand il est à 90° de leur polarisation. Sans caméra, une scène de démonstration est utilisée. C’est une simulation : un téléphone ne mesure pas la polarisation sans vrai filtre devant l’objectif.</p></section>
+</div>
+<script src="prismatik.js"></script>
+</body>
+</html>
